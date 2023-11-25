@@ -23,6 +23,12 @@ body {
     background-size: cover;
 }
 
+main {
+    width: 100%;
+    margin: 5rem 0;
+    padding: 0 var(--padding-main);
+}
+
 h1 {
     font-size: 5rem;
     font-weight: 500;
@@ -30,16 +36,44 @@ h1 {
 }
 
 h2 {
-    font-size: 2.375rem;
+    font-size: 2.25rem;
     font-weight: 500;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-2);
     margin-bottom: 5rem;
 }
 
+h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
 a {
     color: inherit;
     text-decoration: none;
+}
+
+button {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 1.75rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-branding);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-branding-hover);
 }
 
 
@@ -83,16 +117,10 @@ header ul {
 
 
 /* Main content styles */
-main {
-    width: 100%;
-    margin: 5rem 0;
-    padding: 0 var(--padding-main);
-}
-
 /* Welcome section */
 .welcome {
     height: calc(100vh - 5rem - var(--height-header));
-    padding: 8% 14%;
+    padding: 9% 14%;
 }
 
 .welcome p {
@@ -114,8 +142,57 @@ main {
     color: var(--color-branding-hover);
 }
 
+
+/* About section */
+#about {
+    margin-top: 2rem;
+    padding-right: 2rem;
+}
+
+#about > h2 {
+    position: relative;
+    left: 2rem;
+}
+
+#about > div {
+    display: flex;
+    justify-content: center;
+    gap: 14rem;
+}
+
+.bio-container {
+    max-width: 33rem;
+}
+
+.bio-container p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.skills-main-container {
+    min-width: 24rem;
+    max-width: 32rem;
+}
+
+.skills-container {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill {
+    padding: 1rem 1.25rem;
+    background-color: #353535aa;
+    border-radius: var(--border-radius);
+}
+
+
 /* Projects section */
 #projects {
+    margin-top: 12rem;
     padding: 1rem 10rem;
     position: relative;
     display: flex;
