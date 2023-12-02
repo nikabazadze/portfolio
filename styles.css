@@ -3,6 +3,7 @@
     --height-header: 6rem;
     --color-branding: rgb(140, 74, 255);
     --color-branding-hover: rgba(140, 74, 255, 0.8);
+    --color-text-darkerWhite: rgba(255, 255, 255, 0.9);
     --border-radius: 8px;
     --letter-spacing-1: 2px;
     --letter-spacing-2: 4px;
@@ -129,7 +130,7 @@ header ul {
     max-width: 50rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-darkerWhite);
 }
 
 .welcome a {
@@ -155,20 +156,21 @@ header ul {
 }
 
 #about > div {
+    margin-top: 6.5rem;
     display: flex;
     justify-content: center;
     gap: 14rem;
 }
 
 .bio-container {
-    max-width: 33rem;
+    max-width: 35rem;
 }
 
 .bio-container p {
     font-size: 1.125rem;
     line-height: 1.75rem;
     margin-bottom: 1.5rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-darkerWhite);
 }
 
 .skills-main-container {
@@ -184,9 +186,11 @@ header ul {
 }
 
 .skill {
-    padding: 1rem 1.25rem;
+    font-size: 0.9375rem;
+    padding: 0.875rem 1.125rem;
     background-color: #353535aa;
     border-radius: var(--border-radius);
+    box-shadow: 1px 1px 3px var(--color-branding);
 }
 
 
@@ -198,16 +202,6 @@ header ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.timeline {
-    width: 16px;
-    height: 80rem;
-    position: absolute;
-    left: 50%;
-    top: 10rem;
-    background-color: rgba(0, 217, 37, 0.9);
-    border-radius: var(--border-radius);
 }
 
 .project-outer-container {
@@ -223,8 +217,8 @@ header ul {
 
 .project-img-title-container {
     /* border: 1px solid blue; */
-    width: 37%;
-    padding-left: 10%;
+    width: 40%;
+    max-width: 30rem;
     position: relative;
     top: 1rem;
 }
@@ -252,9 +246,25 @@ header ul {
 }
 
 .project-description {
+    /* border: 1px solid blue; */
+    width: 45%;
+}
+
+.project-description > p {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-text-darkerWhite);
+}
+
+.project-description > p:first-of-type {
     font-size: 1.125rem;
-    line-height: 1.4;
-    width: 37%;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.project-description span {
+    font-weight: 700;
+    color: var(--color-branding);
 }
 
 .overlay {
@@ -265,15 +275,6 @@ header ul {
     top: 0;
     border-radius: 12px;
     background-color: rgba(0, 0, 0, 0.1);
-}
-
-.circle {
-    width: 44px;
-    height: 44px;
-    position: relative;
-    left: 8px;
-    border-radius: 50%;
-    background-color: rgb(0, 217, 37);
 }
 
 
