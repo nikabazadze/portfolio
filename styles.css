@@ -1,5 +1,6 @@
 :root {
-    --padding-main: 5rem;
+    --max-width-page: 1500px;
+    --padding-main: 10rem;
     --height-header: 6rem;
     --color-branding: rgb(140, 74, 255);
     --color-branding-hover: rgba(140, 74, 255, 0.8);
@@ -22,12 +23,27 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
     width: 100%;
     margin: 5rem 0;
     padding: 0 var(--padding-main);
+}
+
+main,
+footer {
+    max-width: var(--max-width-page);
+    position: relative;
+    top: var(--height-header);
+}
+
+main,
+footer {
+    border: 1px solid red;
 }
 
 h1 {
@@ -52,9 +68,9 @@ h3 {
 }
 
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 500;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.75rem;
 }
 
 a {
@@ -89,6 +105,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    background-image: url(./images/header-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 100;
 }
 
 .logo {
@@ -121,7 +144,7 @@ header ul {
 /* Welcome section */
 .welcome {
     height: calc(100vh - 5rem - var(--height-header));
-    padding: 9% 14%;
+    padding: 15% 2rem;
 }
 
 .welcome p {
@@ -173,21 +196,24 @@ header ul {
     color: var(--color-text-darkerWhite);
 }
 
+.bio-container button {
+    margin-top: 0.5rem;
+}
+
 .skills-main-container {
     min-width: 24rem;
-    max-width: 32rem;
 }
 
 .skills-container {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .skill {
-    font-size: 0.9375rem;
-    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
     background-color: #353535aa;
     border-radius: var(--border-radius);
     box-shadow: 1px 1px 3px var(--color-branding);
@@ -197,7 +223,6 @@ header ul {
 /* Projects section */
 #projects {
     margin-top: 12rem;
-    padding: 1rem 10rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -206,7 +231,7 @@ header ul {
 
 .project-outer-container {
     /* border: 1px solid red; */
-    width: 100%;
+    width: 95%;
     margin-top: 2rem;
     margin-bottom: 4rem;
     display: flex;
@@ -218,7 +243,7 @@ header ul {
 .project-img-title-container {
     /* border: 1px solid blue; */
     width: 40%;
-    max-width: 30rem;
+    max-width: 27rem;
     position: relative;
     top: 1rem;
 }
