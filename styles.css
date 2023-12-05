@@ -1,15 +1,23 @@
 :root {
+    --padding-main-1: 10rem;
+    --padding-main-2: 6rem;
+    --padding-main-3: 4rem;
+    --padding-main-4: 3rem;
+    --padding-main-5: 2rem;
+
     --max-width-page: 1500px;
-    --padding-main: 10rem;
     --height-header: 6rem;
+
     --color-branding: rgb(140, 74, 255);
     --color-branding-hover: rgba(140, 74, 255, 0.8);
     --color-text-darkerWhite: rgba(255, 255, 255, 0.9);
+
     --border-radius: 8px;
     --letter-spacing-1: 2px;
     --letter-spacing-2: 4px;
 }
 
+/* Universal styles */
 html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
@@ -31,7 +39,7 @@ body {
 main {
     width: 100%;
     margin: 5rem 0;
-    padding: 0 var(--padding-main);
+    padding: 0 var(--padding-main-1);
 }
 
 main,
@@ -43,7 +51,7 @@ footer {
 
 main,
 footer {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 h1 {
@@ -93,15 +101,59 @@ button:hover {
     background-color: var(--color-branding-hover);
 }
 
+@media only screen and (max-width: 1100px) {
+    main {
+        padding: 0 var(--padding-main-2);
+    }
+
+    h1 {
+        font-size: 4.25rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        padding: 0 var(--padding-main-3);
+    }
+
+    h1 {
+        font-size: 3.875rem;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    main {
+        padding: 0 var(--padding-main-4);
+    }
+
+    .tablet {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    main {
+        padding: 0 var(--padding-main-5);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
 
 /* Header styles */
 header {
-    font-size: 1.125rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-1);
     width: 100%;
+    max-width: var(--max-width-page);
     height: var(--height-header);
-    padding: 0 var(--padding-main);
+    padding: 0 var(--padding-main-1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,7 +169,7 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.375rem;
 }
 
 .logoContainer {
@@ -139,6 +191,88 @@ header ul {
     gap: 2rem;
 }
 
+@media only screen and (max-width: 1100px) {
+    header {
+        font-size: 0.9375rem;
+        padding: 0 var(--padding-main-2);
+    }
+
+    .logoContainer {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    header ul {
+        gap: 1.75rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        font-size: 0.875rem;
+        padding: 0 var(--padding-main-3);
+    }
+
+    .logo {
+        gap: 1rem;
+    }
+
+    .logoContainer {
+        width: 2.625rem;
+        height: 2.625rem;
+    }
+
+    header ul {
+        gap: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header {
+        padding: 0 var(--padding-main-4);
+    }
+
+    .logoContainer {
+        width: 2.875rem;
+        height: 2.875rem;
+    }
+
+    header ul {
+        gap: 1.125rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    header {
+        font-size: 0.75rem;
+        padding: 0 var(--padding-main-5);
+    }
+
+    .logoContainer {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    header ul {
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    header {
+        font-size: 0.6875rem;
+        padding: 0 1.5rem;
+    }
+
+    .logoContainer {
+        width: 2.375rem;
+        height: 2.375rem;
+    }
+
+    header ul {
+        gap: 0.75rem;
+    }
+}
 
 /* Main content styles */
 /* Welcome section */
@@ -164,6 +298,51 @@ header ul {
 
 .welcome a:hover {
     color: var(--color-branding-hover);
+}
+
+@media only screen and (max-width: 1300px) {
+    .welcome p {
+        font-size: 1rem;
+        max-width: 42rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .welcome p {
+        max-width: 38rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .welcome p {
+        max-width: 35rem;
+        margin-top: 2rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .welcome {
+        padding-top: 18%;
+    }
+    
+    .welcome p {
+        font-size: 0.9375rem;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .welcome {
+        padding: 15% 0.5rem;
+    }
+    
+    .welcome p {
+        font-size: 0.875rem;
+    }
+
+    .welcome a {
+        font-size: 0.875rem;
+    }
 }
 
 
