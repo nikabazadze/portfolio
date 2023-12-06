@@ -390,6 +390,7 @@ header ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin-top: 8rem;
 }
 
 .project-outer-container {
@@ -566,6 +567,7 @@ header ul {
 #about {
     margin-top: 10rem;
     padding: 0 1rem;
+    scroll-margin-top: 8rem;
 }
 
 #about > div {
