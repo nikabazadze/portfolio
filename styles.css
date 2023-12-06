@@ -43,16 +43,10 @@ main {
     padding: 0 var(--padding-main-1);
 }
 
-main,
-footer {
+main {
     max-width: var(--max-width-page);
     position: relative;
     top: var(--height-header);
-}
-
-main,
-footer {
-    /* border: 1px solid red; */
 }
 
 h1 {
@@ -438,7 +432,6 @@ header ul {
 }
 
 .project-description-container {
-    /* border: 1px solid blue; */
     width: 45%;
 }
 
@@ -719,18 +712,21 @@ header ul {
 /* Footer */
 footer {
     width: 100%;
-    margin-top: 10rem;
-    padding: 0 20rem;
+    margin-top: 15rem;
+    padding: 0 15%;
 }
 
 .contact-container {
     border-bottom: 1px solid #d8d8d8;
-    padding: 0 12rem;
-    padding-right: 14rem;
-    padding-bottom: 4rem;
+    padding: 0 14rem 4rem 10rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 6rem;
 }
+
+/* .contact-container > * {
+    border: 1px solid red;
+} */
 
 .contact-info > div {
     font-size: 1.125rem;
@@ -765,8 +761,8 @@ footer {
 }
 
 .socials img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -774,4 +770,67 @@ footer {
     text-align: center;
     margin-top: 1rem;
     padding: 2rem 0;
+}
+
+@media only screen and (max-width: 950px) {
+    footer {
+        margin-top: 11rem;
+    }
+
+    footer h2 {
+        margin-bottom: 3rem;
+    }
+
+    .contact-container {
+        padding: 0;
+        padding-bottom: 2.5rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .contact-info > div {
+        font-size: 1rem;
+    }
+
+    .contact-info img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .socials-container h3 {
+        display: none;
+    }
+
+    .copyright {
+        font-size: 0.875rem;
+        padding: 1.5rem 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .contact-container {
+        padding-bottom: 2rem;
+        gap: 1.75rem;
+    }
+
+    .contact-info > div {
+        font-size: 0.875rem;
+    }
+
+    .contact-info img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .socials img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+        padding: 1rem 0;
+    }
 }
