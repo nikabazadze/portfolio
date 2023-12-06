@@ -17,13 +17,13 @@
                 <div class="logoContainer">
                     <img src="./images/profileImg.jpg" alt="Logo" />
                 </div>
-                <p>Nika Bazadze</p>
+                <p class="tablet">Nika Bazadze</p>
             </div></a>
 
             <!-- Navigation -->
             <nav>
                 <ul>
-                    <li><a href="#">home</a></li>
+                    <li class="desktop"><a href="#">home</a></li>
                     <li><a href="#about">about</a></li>
                     <li><a href="#projects">projects</a></li>
                     <li><a href="#contact">contact</a></li>
@@ -34,7 +34,6 @@
         <main>
             <!-- Welcome section -->
             <section class="welcome">
-                <!-- <h1>Hey, I'm Nika Bazadze</h1> -->
                 <h1>Welcome!</h1>
                 <p>
                     I am a full-stack developer whose path has evolved from managing products to crafting them directly. 
@@ -42,8 +41,70 @@
                     Explore my portfolio to see the projects I've meticulously engineered.
                 </p>
                 <div>
-                    <a href="#">View my projects</a>
-                    <a href="#">Contact me</a>
+                    <a href="#projects">View my projects</a>
+                    <a href="#contact">Contact me</a>
+                </div>
+            </section>
+
+            <!-- Projects section -->
+            <section id="projects">
+                <h2>practice projects</h2>
+
+                <!-- Project 1 -->
+                <div class="project-outer-container">
+                    <div class="project-img-title-container">
+                        <div class="project-img-container">
+                            <a href="https://ziplix.netlify.app/" target="_blank">
+                                <img src="./images/ziplix.png" alt="Project image" />
+                                <div class="overlay"></div>
+                            </a>
+                        </div>
+                        <p>ZiPLiX</p>
+                    </div>
+                    <div class="project-description-container">
+                        <p class="project-summary">ZiPLiX is a sophisticated e-commerce site with advanced features for a superior shopping experience, built using a full-stack approach.</p>
+                        <p class="project-tech"><span>Front-End:</span> HTML, CSS, JavaScript, React, React Router, Redux</p>
+                        <p class="project-tech"><span>Back-End:</span> Node.js, Express.js, Passport.js, Postgres</p>
+                        <p class="project-tech"><span>Deployment:</span> front-end - Netlify, back-end - Heroku, database - AWS RDS, images - AWS S3</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-outer-container">
+                    <div class="project-img-title-container">
+                        <div class="project-img-container">
+                            <a href="https://minireddit-app.netlify.app" target="_blank">
+                                <img src="./images/miniReddit.png" alt="Project image" />
+                                <div class="overlay"></div>
+                            </a>
+                        </div>
+                        <p>MiniReddit</p>
+                    </div>
+                    <div class="project-description-container">
+                        <p class="project-summary">MiniReddit is a condensed version of Reddit, harnessing React and Redux for dynamic front-end development, fetching live data via Reddit's API.</p>
+                        <p class="project-tech"><span>Front-End:</span> HTML, CSS, JavaScript, React, Redux</p>
+                        <p class="project-tech"><span>Third-party API:</span> Reddit's JSON API</p>
+                        <p class="project-tech"><span>Deployment:</span> Netlify</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-outer-container">
+                    <div class="project-img-title-container">
+                        <div class="project-img-container">
+                            <a href="https://jammming-reactapp.netlify.app" target="_blank">
+                                <img src="./images/jammming.png" alt="Project image" />
+                                <div class="overlay"></div>
+                            </a>
+                        </div>
+                        <p>Jammming</p>
+                    </div>
+                    <div class="project-description-container">
+                        <p class="project-summary">A React-based music app integrating Spotify's API, allowing users to search, create, and save custom playlists to their account.</p>
+                        <p class="project-tech"><span>Front-End:</span> HTML, CSS, JavaScript, React</p>
+                        <p class="project-tech"><span>Third-party API:</span> Spotify's WEB API</p>
+                        <p class="project-tech"><span>Deployment:</span> Netlify</p>
+                    </div>
                 </div>
             </section>
 
@@ -115,68 +176,6 @@
                                 <div class="skill">Leadership</div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects section -->
-            <section id="projects">
-                <h2>practice projects</h2>
-
-                <!-- Project 1 -->
-                <div class="project-outer-container">
-                    <div class="project-img-title-container">
-                        <div class="project-img-container">
-                            <a href="https://ziplix.netlify.app/" target="_blank">
-                                <img src="./images/ziplix.png" alt="Project image" />
-                                <div class="overlay"></div>
-                            </a>
-                        </div>
-                        <p>ZiPLiX</p>
-                    </div>
-                    <div class="project-description">
-                        <p>ZiPLiX is a sophisticated e-commerce site with advanced features for a superior shopping experience, built using a full-stack approach.</p>
-                        <p><span>Front-End:</span> HTML, CSS, JavaScript, React, React Router, Redux</p>
-                        <p><span>Back-End:</span> Node.js, Express.js, Passport.js, Postgres</p>
-                        <p><span>Deployment:</span> front-end - Netlify, back-end - Heroku, database - AWS RDS, images - AWS S3</p>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-outer-container">
-                    <div class="project-img-title-container">
-                        <div class="project-img-container">
-                            <a href="https://minireddit-app.netlify.app" target="_blank">
-                                <img src="./images/miniReddit.png" alt="Project image" />
-                                <div class="overlay"></div>
-                            </a>
-                        </div>
-                        <p>MiniReddit</p>
-                    </div>
-                    <div class="project-description">
-                        <p>MiniReddit is a condensed version of Reddit, harnessing React and Redux for dynamic front-end development, fetching live data via Reddit's API.</p>
-                        <p><span>Front-End:</span> HTML, CSS, JavaScript, React, Redux</p>
-                        <p><span>Third-party API:</span> Reddit's JSON API</p>
-                        <p><span>Deployment:</span> Netlify</p>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-outer-container">
-                    <div class="project-img-title-container">
-                        <div class="project-img-container">
-                            <a href="https://jammming-reactapp.netlify.app" target="_blank">
-                                <img src="./images/jammming.png" alt="Project image" />
-                                <div class="overlay"></div>
-                            </a>
-                        </div>
-                        <p>Jammming</p>
-                    </div>
-                    <div class="project-description">
-                        <p>A React-based music app integrating Spotify's API, allowing users to search, create, and save custom playlists to their account.</p>
-                        <p><span>Front-End:</span> HTML, CSS, JavaScript, React</p>
-                        <p><span>Third-party API:</span> Spotify's WEB API</p>
-                        <p><span>Deployment:</span> Netlify</p>
                     </div>
                 </div>
             </section>
