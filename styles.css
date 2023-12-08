@@ -6,7 +6,7 @@
     --padding-main-4: 3rem;
     --padding-main-5: 2rem;
 
-    --max-width-page: 1500px;
+    --max-width-page: 1700px;
     --height-header: 4.5rem;
 
     --color-branding: rgb(140, 74, 255);
@@ -395,6 +395,7 @@ header ul {
 
 .project-outer-container {
     width: 95%;
+    max-width: 70rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
     display: flex;
